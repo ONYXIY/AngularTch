@@ -1,4 +1,4 @@
-export interface ImenuItem{
+export interface IMenuItem {
     path: string
     icon: string
 }

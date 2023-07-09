@@ -1,25 +1,32 @@
-import { ImenuItem } from './header.interface';
+import { IMenuItem } from './header.interface';
 import { Component, OnInit } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  template: `
-    <i class="fas fa-heart"></i>
-  `,
-  styleUrls: ['./header.component.scss'],
-  
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit{
+  menuItems: IMenuItem[] = [
+    {
+      path: '/',
+      icon: 'Home'
+    },{
+      path: '/sale',
+      icon: 'percentage'
+    },{
+      path: '/favorites',
+      icon: 'favorite'
+    },{
+      path: '/profile',
+      icon: 'person'
+    },
+  ]
 
-menuItems: ImenuItem[] = []
   constructor(){
 
   }
   ngOnInit(): void {
     
   }
-
 }

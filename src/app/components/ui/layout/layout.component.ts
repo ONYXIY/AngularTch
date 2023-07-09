@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -6,14 +6,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit{
-  // message: string = '';
-  constructor(){
-  // setInterval(() =>{
-  //   this.message = new Date().toLocaleTimeString();
-  // }, 1000)
-  }
-  ngOnInit(): void {
-    
-  }
-  }
+export class LayoutComponent{
+ 
+}
