@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
-import { HeaderModule } from './header/header.module';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
   declarations: [
-    LayoutComponent,
+    LayoutComponent
   ],
   exports:[LayoutComponent],
   imports: [
     CommonModule,
-    HeaderModule
+    FormsModule
+
   ]
 })
 export class LayoutModule { }

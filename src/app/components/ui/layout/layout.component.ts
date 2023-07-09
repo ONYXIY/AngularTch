@@ -1,4 +1,5 @@
-import { Component,OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 
 @Component({
@@ -6,14 +7,14 @@ import { Component,OnInit } from '@angular/core';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit{
- constructor(){
- }
- myEvent(event){
-  console.log(event);
-
- }
- ngOnInit() {
-   
- }
+export class LayoutComponent {
+  visibility: boolean = true;
+  isCollapsed: boolean = false;
+  toggleCollapse(){
+  this.isCollapsed = !this.isCollapsed;
+}
+toggle(){
+  this.visibility = !this.visibility;
+}
+text: string = '';
 }
