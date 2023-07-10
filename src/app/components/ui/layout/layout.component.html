@@ -1,15 +1,11 @@
-<div><button *ngIf="isCollapsed" (click)="toggleCollapse()">Show</button>
-<button *ngIf="!isCollapsed" (click)="toggleCollapse()">Hide</button>
-
+<app-header></app-header>
 <div>
-    <p *ngIf="!isCollapsed">FUUUCK</p>
-</div>
-</div>
-<input type="text" [(ngModel)]="text">
-<p>{{text}}</p>
+    <nav>
+        <ul>
+            <li>
+                <a></a>
+            </li>
+        </ul>
+    </nav>
 
-<div [ngClass]="{invisible: visibility}">
-    <h1>Sup</h1>
-    <p [ngClass]="{class2: true}">Shut up and teach</p>
 </div>
-<button (click)='toggle()'>On/Off</button>

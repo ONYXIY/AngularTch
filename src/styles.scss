@@ -5,9 +5,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-body {
-    background-color: rgb(33, 43, 97);
-}
+html, body { height: 90%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+@apply mx-auto;
+max-width: 750px; 
+border: solid 2px black;
+border-radius: 10px;}
+
 

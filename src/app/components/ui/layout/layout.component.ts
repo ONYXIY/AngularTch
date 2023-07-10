@@ -8,13 +8,5 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-  visibility: boolean = true;
-  isCollapsed: boolean = false;
-  toggleCollapse(){
-  this.isCollapsed = !this.isCollapsed;
-}
-toggle(){
-  this.visibility = !this.visibility;
-}
-text: string = '';
+
 }
