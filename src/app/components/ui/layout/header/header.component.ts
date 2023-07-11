@@ -7,7 +7,7 @@ import { IMenuItem } from './header.interface';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  AppName: string = 'App Name';
+  AppName: string = 'app name';
   ItemMenu: IMenuItem [] = [
     {
       path: '/',

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderModule } from './header/header.module';
+import { ProductModule } from '../../products/product/product.module';
 
 
 
@@ -14,7 +15,10 @@ import { HeaderModule } from './header/header.module';
   imports: [
     CommonModule,
     FormsModule,
-    HeaderModule
+    HeaderModule,
+    ProductModule
+    
+    
 
   ]
 })
