@@ -11,19 +11,19 @@ export class HeaderComponent {
   ItemMenu: IMenuItem [] = [
     {
       path: '/',
-      icon: 'home'
+      icon: 'home',
     },
     {
       path: '/sale',
-      icon: 'percent'
+      icon: 'percent',
     },
     {
       path: '/favorite',
-      icon: 'favorite'
+      icon: 'favorite',
     },
     {
       path: '/profile',
-      icon: ''
+      icon: 'person',
     }
   ];
 
