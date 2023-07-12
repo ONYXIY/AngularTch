@@ -1,5 +1,6 @@
-import { errorService } from './../../services/error.service';
+
 import { Component, OnInit } from '@angular/core';
+import { errorService } from 'src/app/services/error.service';
 
 @Component({
   selector: 'app-global-error',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GlobalErrorComponent implements OnInit {
 
-  constructor(private errorService: errorService){
+  constructor(public errorService: errorService){
 
   }
 

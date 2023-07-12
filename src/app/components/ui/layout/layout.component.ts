@@ -23,10 +23,6 @@ export class LayoutComponent implements OnInit{
   ngOnInit(): void {
     this.loading = true;
     this.products$ = this.ProductsService.getAll().pipe(tap(()=> this.loading = false))
-    // this.ProductsService.getAll().subscribe(products =>{
-    //   this.products = products;
-    //   this.loading = false;
-    // })
   }
 
 }

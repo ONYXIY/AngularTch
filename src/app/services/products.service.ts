@@ -21,10 +21,10 @@ export class ProductsService{
             fromObject: {limit: 2}
         })
     }).pipe(
-        catchError(this.eerrorHandler)
+        catchError(this.errorHandler.bind(this))
     )
     }
-    private eerrorHandler(error: HttpErrorResponse){
+    private errorHandler(error: HttpErrorResponse){
         this.errorService.handle(error.message)
         return throwError(() => error.message)
     }
