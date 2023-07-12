@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './product.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -9,7 +10,7 @@ import { ProductComponent } from './product.component';
     ProductComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, MatIconModule,
   ],
   exports: [ProductComponent]
 })

@@ -1,9 +1,4 @@
-.MainLogo {
-    max-width: 75px;
-    max-height: 75px;
-    margin: 5px 20px;
-}
-.nav {
+.nav-light {
     position: fixed;
     bottom: 20px;
     left: 50%;
@@ -38,7 +33,7 @@
         height: 60px;
         position: relative;
         color: #ff7f50;
-        font-size: 2rem; /* Increase the font size as desired */
+        font-size: 2rem;
         transition: color 0.3s linear;
   
         &::before {
@@ -61,6 +56,70 @@
   
         &:hover {
           color: #ffffff;
+        }
+      }
+    }
+  }
+  
+
+  .nav-dark {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #1e293b;
+  
+  
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+    }
+  
+    li {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+  
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        color: #ff7f50;
+        font-size: 2rem;
+        transition: color 0.3s linear;
+  
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 0;
+          height: 100%;
+          background-color: #ff7f50;
+          transition: width 0.3s linear;
+          z-index: -1;
+          border-radius: 3px;
+        }
+  
+        &:hover::before {
+          width: 100%;
+          right: 0;
+        }
+  
+        &:hover {
+          color: #1e293b;
         }
       }
     }

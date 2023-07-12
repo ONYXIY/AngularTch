@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IMenuItem } from './header.interface';
+import { Component} from '@angular/core'
+
+import { IMenuItem } from './header.interface'
 
 @Component({
   selector: 'app-header',
@@ -7,25 +8,25 @@ import { IMenuItem } from './header.interface';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  AppName: string = 'app name';
-  ItemMenu: IMenuItem [] = [
+  darkModeON: boolean = false
+  AppName: string = 'app name'
+  ItemMenu: IMenuItem[] = [
     {
       path: '/',
-      icon: 'home',
+      icon: 'home'
     },
     {
       path: '/sale',
-      icon: 'percent',
+      icon: 'percent'
     },
     {
       path: '/favorite',
-      icon: 'favorite',
+      icon: 'favorite'
     },
     {
       path: '/profile',
-      icon: 'person',
+      icon: 'person'
     }
-  ];
-
+  ]
 
 }
