@@ -1,6 +1,7 @@
-import { Component, Inject } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
+import { ProductsService } from './../../../services/products.service';
+import { Component, Inject, OnInit } from '@angular/core';
+import { IProduct} from '../../products/product/product.interface';
+
 
 
 @Component({
@@ -8,17 +9,19 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit{
   // darkModeON: boolean = false;
+  products: IProduct[] = [];
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(private ProductsService: ProductsService) {
+    this.ProductsService.getAll().subscribe(products =>{
+      this.products = products;
+    })
+  }
+
 
   ngOnInit(): void {
-    // const indexHtml = document.documentElement;
-
-    // if (indexHtml.classList.contains('dark')) {
-    //   this.darkModeON = !this.darkModeON;
-    // }
+    
   }
 
 }

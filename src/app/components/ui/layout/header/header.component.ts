@@ -1,6 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { IMenuItem } from './header.interface';
+import { IdarkMode } from 'src/app/components/products/product/darkMode.interface';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,12 @@ import { IMenuItem } from './header.interface';
 })
 export class HeaderComponent {
   darkModeON: boolean = false;
-  AppName: string = 'app name'
+  AppName: string = 'app name';
+  TuggleMode: IdarkMode [] = [
+    {
+      icon: 'light_mode'
+   }
+  ]
   ItemMenu: IMenuItem[] = [
     {
       path: '/',
@@ -30,9 +36,7 @@ export class HeaderComponent {
   ]
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
-// Весь нижний код написал gpt chat, я более 5 часов просидел и не могу понять,
-// почему же darkModeON не меняет свое значение, когда статус html меняется,
-// это единственный эелемент, который так себя вел
+
   ngOnInit(): void {
     this.checkDarkMode();
 
@@ -41,6 +45,18 @@ export class HeaderComponent {
     });
 
     classObserver.observe(this.document.documentElement, { attributes: true, attributeFilter: ['class'] });
+  }
+  toggleDarkMode(): void {
+    const indexHtml = document.documentElement;
+    this.darkModeON = !this.darkModeON;
+
+    if (this.darkModeON) {
+      indexHtml.classList.remove('light');
+      indexHtml.classList.add('dark');
+    } else {
+      indexHtml.classList.remove('dark');
+      indexHtml.classList.add('light');
+    }
   }
 
   checkDarkMode(): void {

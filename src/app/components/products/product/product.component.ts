@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { IdarkMode } from './product.interface';
-import { DOCUMENT } from '@angular/common';
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import { IdarkMode } from './darkMode.interface';
+import { DOCUMENT } from '@angular/common'
+import { IProduct } from './product.interface';
 
 
 
@@ -12,32 +13,28 @@ import { DOCUMENT } from '@angular/common';
 export class ProductComponent implements OnInit {
   realText: boolean = false;
   isIndexHtmlDark: boolean = false;
-   TuggleMode: IdarkMode [] = [
-    {
-      icon: 'light_mode'
-   }
-  ]
+  moreDetails: boolean = false;
 
+  @Input() product: IProduct
 
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
-    // const indexHtml = document.documentElement;
+    this.checkDarkMode();
 
-    // if (indexHtml.classList.contains('dark')) {
-    //   this.isIndexHtmlDark = !this.isIndexHtmlDark;
-    // }
+    const classObserver = new MutationObserver(() => {
+      this.checkDarkMode();
+    });
+
+    classObserver.observe(this.document.documentElement, { attributes: true, attributeFilter: ['class'] });
   }
 
   toggleDarkMode(): void {
     const indexHtml = document.documentElement;
     this.isIndexHtmlDark = !this.isIndexHtmlDark;
 
-    if (this.isIndexHtmlDark) {
-      indexHtml.classList.remove('light');
-      indexHtml.classList.add('dark');
-    } else {
-      indexHtml.classList.remove('dark');
-      indexHtml.classList.add('light');
-    }
+  }
+  checkDarkMode(): void {
+    this.isIndexHtmlDark = this.document.documentElement.classList.contains('dark');
   }
 }

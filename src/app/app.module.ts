@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { MatIconModule } from '@angular/material/icon'
 import { LayoutModule } from './components/ui/layout/layout.module'
+import { HttpClientModule } from '@angular/common/http'
+
 
 
 
@@ -14,6 +16,7 @@ import { LayoutModule } from './components/ui/layout/layout.module'
     AppRoutingModule,
     MatIconModule,
     LayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,22 @@
-<div>
-  <button *ngFor="let item of TuggleMode" (click)="toggleDarkMode()" [ngClass]="isIndexHtmlDark ? 'rounded-x1 shadow-sm bg-slate-800 text-w mx-auto' : 'bg-white rounded-x1 shadow-sm text-slate-800'">
-    <mat-icon *ngIf="isIndexHtmlDark">light_mode</mat-icon>
-    <mat-icon *ngIf="!isIndexHtmlDark">nights_stay</mat-icon>
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-2">
+ 
+  <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2 transform motion-safe:hover:scale-110">
+  <h2
+    [ngClass]="isIndexHtmlDark ? 'mb-2 rounded-x1 bg-slate-800 text-white mx-aut' : ' bg-white rounded-x1 mb-2 text-slate-800 '">
+    {{product.title}}</h2>
+  <p>Price: <span class="font-bold">{{product.price | currency}}</span></p>
+
+  <button class="border py-2 px-4 rounded bg-orange-500" 
+  (click)="moreDetails = !moreDetails">
+    {{moreDetails? 'Hide' : 'Show'}} description
   </button>
+  <div *ngIf="moreDetails" class="w-64">
+    <p [ngClass]="isIndexHtmlDark ? ' bg-slate-800 text-white' : 'bg-white text-slate-800'">
+      {{product.description}}
+    </p>
+    <p [ngClass]="isIndexHtmlDark ? ' bg-slate-800 text-white' : 'bg-white text-slate-800'">
+      Rate: {{product.rating.rate}}
+    </p>
+  </div>
+  
 </div>
-<p [ngClass]="isIndexHtmlDark ? 'rounded-x1 shadow-sm bg-slate-800 text-w mx-auto' : 'bg-white rounded-x1 shadow-sm text-slate-800'"
-   (mouseover)="realText = true"
-   (mouseout)="realText = false">
-  <span *ngIf="!realText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque mollitia itaque vel labore ex quis fugiat impedit, dolor blanditiis repudiandae rem iure facere obcaecati, aliquid modi culpa distinctio quia assumenda.</span>
-  <span *ngIf="realText">Не завидую тому, кто будет делать код ревью конечно...</span>
-</p>

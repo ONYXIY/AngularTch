@@ -9,6 +9,10 @@
       {{AppName | titlecase}}
     </h1>
   </div>
+  <button *ngFor="let item of TuggleMode" (click)="toggleDarkMode()" [ngClass]="darkModeON ? 'rounded-x1 bg-slate-800 text-w mx-auto' : 'bg-white rounded-x1 text-slate-800'">
+    <mat-icon *ngIf="darkModeON">light_mode</mat-icon>
+    <mat-icon *ngIf="!darkModeON">nights_stay</mat-icon>
+  </button>
 </div>
 
 <div>
