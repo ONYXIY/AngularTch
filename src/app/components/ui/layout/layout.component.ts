@@ -14,8 +14,10 @@ export class LayoutComponent {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
-    if (this.document.documentElement.classList.contains('dark')) {
-      this.darkModeON = !this.darkModeON
+    const indexHtml = document.documentElement;
+
+    if (indexHtml.classList.contains('dark')) {
+      this.darkModeON = !this.darkModeON;
     }
   }
 

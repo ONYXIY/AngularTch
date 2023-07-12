@@ -24,7 +24,7 @@ export class ProductComponent implements OnInit {
     const indexHtml = document.documentElement;
 
     if (indexHtml.classList.contains('dark')) {
-      this.isIndexHtmlDark = true;
+      this.isIndexHtmlDark = !this.isIndexHtmlDark;
     }
   }
 
