@@ -9,16 +9,16 @@ import { DOCUMENT } from '@angular/common';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
-  darkModeON: boolean = false;
+  // darkModeON: boolean = false;
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit(): void {
-    const indexHtml = document.documentElement;
+    // const indexHtml = document.documentElement;
 
-    if (indexHtml.classList.contains('dark')) {
-      this.darkModeON = !this.darkModeON;
-    }
+    // if (indexHtml.classList.contains('dark')) {
+    //   this.darkModeON = !this.darkModeON;
+    // }
   }
 
 }

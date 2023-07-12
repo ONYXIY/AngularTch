@@ -21,11 +21,11 @@ export class ProductComponent implements OnInit {
 
 
   ngOnInit(): void {
-    const indexHtml = document.documentElement;
+    // const indexHtml = document.documentElement;
 
-    if (indexHtml.classList.contains('dark')) {
-      this.isIndexHtmlDark = !this.isIndexHtmlDark;
-    }
+    // if (indexHtml.classList.contains('dark')) {
+    //   this.isIndexHtmlDark = !this.isIndexHtmlDark;
+    // }
   }
 
   toggleDarkMode(): void {
