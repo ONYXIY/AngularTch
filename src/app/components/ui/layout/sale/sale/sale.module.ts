@@ -10,6 +10,7 @@ import { SaleComponent } from './sale.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports:[SaleComponent]
 })
 export class SaleModule { }
