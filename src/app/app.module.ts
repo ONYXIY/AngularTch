@@ -9,7 +9,6 @@ import { GlobalErrorComponent } from './components/global-error/global-error.com
 
 
 
-
 @NgModule({
   declarations: [AppComponent, GlobalErrorComponent],
   imports: [

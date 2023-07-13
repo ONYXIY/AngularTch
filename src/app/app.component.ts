@@ -2,15 +2,20 @@ import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-root',
-  // template: `<div>
-  //   <h1>My First Angular App</h1>
-  //   <nav>
-  //   <router-outlet></router-outlet>
-  //     <a routerLink="">MainPage</a>
-  //     <a routerLink="samePage">NotMainPage</a>
-  //   </nav>
-  // </div>`,
-  templateUrl: './app.component.html',
+  template: `<div>
+    <app-global-error></app-global-error>
+    
+      <nav>
+        <a routerLink=""></a>
+        <a routerLink="sale"></a>
+        <a routerLink="favorite"></a>
+        <a routerLink="profile"></a>
+      </nav>
+      <app-layout>
+        <router-outlet></router-outlet>
+    </app-layout>
+    </div>`,
+  // templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
