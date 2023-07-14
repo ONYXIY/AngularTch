@@ -9,24 +9,31 @@ import { ProfileComponent } from './components/ui/layout/profile/profile/profile
 const routes: Routes = [
   {
     path: '', // Пустой путь - главная страница
-    component: AppComponent  // Компонент, который будет отображен для главной страницы
+    component: AppComponent,  // Компонент, который будет отображен для главной страницы
+    children: [
+      {path: 'sale', component: SaleComponent},
+      {path: 'favorite',component: FavoriteComponent},
+      {path: 'profile', 
+    loadChildren: () => import('./components/ui/layout/profile/profile/profile.module').then((m)=> m.ProfileModule)
+    }
+    ]
   },
-  {
-    path: 'samePage', // почти главная с:
-    component: LayoutComponent  // другая компонента
-  },
-  {
-    path: 'sale', // страница скидок
-    component: SaleComponent
-  },
-  {
-  path: 'favorite',
-  component: FavoriteComponent
-  },
-  {
-    path: 'profile',
-    component: ProfileComponent
-  }
+  // {
+  //   path: 'samePage', // почти главная с:
+  //   component: LayoutComponent  // другая компонента
+  // },
+  // {
+  //   path: 'sale', // страница скидок
+  //   component: SaleComponent
+  // },
+  // {
+  // path: 'favorite',
+  // component: FavoriteComponent
+  // },
+  // {
+  //   path: 'profile',
+  //   component: ProfileComponent
+  // }
 ];
 
 @NgModule({
