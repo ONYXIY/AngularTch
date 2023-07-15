@@ -2,7 +2,6 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject } from '@angular/core';
 import { IMenuItem } from './header.interface';
 import { IdarkMode } from 'src/app/components/products/product/darkMode.interface';
-import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
