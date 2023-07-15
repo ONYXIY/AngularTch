@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
-import { IdarkMode } from './darkMode.interface';
 import { DOCUMENT } from '@angular/common'
 import { IProduct } from './product.interface';
 
