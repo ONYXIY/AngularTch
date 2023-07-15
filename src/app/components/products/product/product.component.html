@@ -1,5 +1,5 @@
 
-<div class="py-4 px-6 border rounded flex items-center flex-col mb-2">
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-2 ">
  
   <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2 transform motion-safe:hover:scale-110">
   <h2
@@ -7,17 +7,18 @@
     {{product.title}}</h2>
   <p>Price: <span class="font-bold">{{product.price | currency}}</span></p>
 
-  <button class="border py-2 px-4 rounded bg-orange-500" 
-  (click)="moreDetails = !moreDetails">
-    {{moreDetails? 'Hide' : 'Show'}} description
+  <button class="border py-2 px-4 rounded bg-orange-500" (click)="moreDetails = !moreDetails">
+    {{moreDetails ? 'Hide' : 'Show'}} description
   </button>
-  <div *ngIf="moreDetails" class="w-64 max-h-{50} overflow-auto">
-    <p [ngClass]="isIndexHtmlDark ? ' bg-slate-800 text-white max-h-300 overflow-auto' : 'bg-white text-slate-800'">
-      {{product.description}}
-    </p>
-    <p [ngClass]="isIndexHtmlDark ? ' bg-slate-800 text-white' : 'bg-white text-slate-800'">
-      Rate: {{product.rating.rate}}
-    </p>
-  </div>
-  
+  <div *ngIf="moreDetails" class="w-80 max-h-50 overflow-auto">
+    <div class="max-h-40 overflow-auto">
+      <p [ngClass]="isIndexHtmlDark ? 'bg-slate-800 text-white' : 'bg-white text-slate-800'"
+         class="h-auto">
+        {{product.description}}
+      </p>
+      <p [ngClass]="isIndexHtmlDark ? 'bg-slate-800 text-white' : 'bg-white text-slate-800'"
+         class="h-auto">
+        Rate: {{product.rating.rate}}
+      </p>
+    </div>
 </div>
