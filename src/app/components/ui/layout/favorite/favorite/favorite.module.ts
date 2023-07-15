@@ -10,6 +10,7 @@ import { FavoriteComponent } from './favorite.component';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [FavoriteComponent]
 })
 export class FavoriteModule { }

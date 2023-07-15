@@ -4,6 +4,7 @@ import { LayoutComponent } from './layout.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderModule } from './header/header.module';
 import { ProductModule } from '../../products/product/product.module';
+import { FavoriteModule } from './favorite/favorite/favorite.module';
 
 
 
@@ -16,7 +17,8 @@ import { ProductModule } from '../../products/product/product.module';
     CommonModule,
     FormsModule,
     HeaderModule,
-    ProductModule
+    ProductModule,
+    FavoriteModule
     
     
 

@@ -4,7 +4,6 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './components/ui/layout/layout.component';
 import { SaleComponent } from './components/ui/layout/sale/sale/sale.component';
 import { FavoriteComponent } from './components/ui/layout/favorite/favorite/favorite.component';
-import { ProfileComponent } from './components/ui/layout/profile/profile/profile.component';
 
 const routes: Routes = [
   {
@@ -14,7 +13,8 @@ const routes: Routes = [
       {path: 'sale', component: SaleComponent},
       {path: 'favorite',component: FavoriteComponent},
       {path: 'profile', 
-    loadChildren: () => import('./components/ui/layout/profile/profile/profile.module').then((m)=> m.ProfileModule)
+    loadChildren: () => import('./components/ui/layout/profile/profile/profile.module')
+    .then((m)=> m.ProfileModule)
     }
     ]
   },
