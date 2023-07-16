@@ -22,6 +22,10 @@ export class ProductComponent implements OnInit {
 
   users: User[] = [];
 
+  submitForm(){
+    
+  }
+
   @Input() product: IProduct
 
   constructor(@Inject(DOCUMENT) private document: Document, private usersService: UsersService) {
