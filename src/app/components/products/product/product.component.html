@@ -1,33 +1,4 @@
-
-<div >
-  Имя<input [(ngModel)]="name" type="text " class="border border-solid border-gray-300 m-2 text-orange-500" >
-  <br>
-  Возраст<input [(ngModel)]="age" type="number" class="border border-solid border-gray-300 m-2  text-orange-500">
-
-  <button (click)="addUser()" >Сохранить</button>
-</div>
-
-<div>
-  <table>
-    <thead>
-      <tr>
-        <th>Имя</th>
-        <th>Возраст</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of users">
-        <td>{{item.name}}</td>
-        <td>{{item.age}}</td>
-        
-        
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- <div class="py-4 px-6 border rounded flex items-center flex-col mb-2 ">
+<div class="py-4 px-6 border rounded flex items-center flex-col mb-2 ">
   <img [src]="product.image" [alt]="product.title" class="w-1/6 mb-2 transform motion-safe:hover:scale-110">
   <h2
     [ngClass]="isIndexHtmlDark ? 'mb-2 rounded-x1 bg-slate-800 text-white mx-aut' : ' bg-white rounded-x1 mb-2 text-slate-800 '">
@@ -48,4 +19,4 @@
         Rate: {{product.rating.rate}}
       </p>
     </div>
-</div> -->
+</div>
