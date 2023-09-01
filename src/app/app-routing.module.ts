@@ -7,8 +7,8 @@ import { FavoriteComponent } from './components/ui/layout/favorite/favorite/favo
 
 const routes: Routes = [
   {
-    path: '', // Пустой путь - главная страница
-    component: AppComponent,  // Компонент, который будет отображен для главной страницы
+    path: '',
+    component: AppComponent,
     children: [
       {path: 'sale', component: SaleComponent},
       {path: 'favorite',component: FavoriteComponent},
@@ -18,22 +18,6 @@ const routes: Routes = [
     }
     ]
   },
-  // {
-  //   path: 'samePage', // почти главная с:
-  //   component: LayoutComponent  // другая компонента
-  // },
-  // {
-  //   path: 'sale', // страница скидок
-  //   component: SaleComponent
-  // },
-  // {
-  // path: 'favorite',
-  // component: FavoriteComponent
-  // },
-  // {
-  //   path: 'profile',
-  //   component: ProfileComponent
-  // }
 ];
 
 @NgModule({

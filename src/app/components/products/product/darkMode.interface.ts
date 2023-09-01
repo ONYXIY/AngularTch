@@ -1,3 +1,3 @@
-export interface IdarkMode{
+export interface IDarkMode{
     icon: string;
 }
