@@ -3,7 +3,6 @@ import { DOCUMENT } from '@angular/common'
 import { IProduct } from './product.interface';
 import { UsersService } from 'src/app/services/users.service';
 import { User } from '../../models/user.models';
-import { FormsModule } from '@angular/forms';
 
 
 
